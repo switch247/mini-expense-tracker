@@ -1,6 +1,9 @@
 <div align="center">
     
   <br />
+  Expense Ease is an advanced AI-driven expense management tool built with Next.js and TypeScript. It allows users to input their income, expenses, and budgets, providing personalized financial advice using OpenAI's GPT-4 model. The project features responsive design and effective budget management capabilities.
+  
+  <br />
 
   <div>
     <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
@@ -21,11 +24,6 @@
 5. 🕸️ [Assets & Code](#snippets)
 6. 🚀 [More](#more)
 
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@albertmends/videos" target="_blank"><b>Code with Albert</b></a>.
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
 
 ## <a name="introduction">🤖 Introduction</a>
 
