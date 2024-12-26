@@ -49,6 +49,12 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Responsive Design**: Ensures a seamless experience across different devices.
 
+👉 **New Feature: Expense Tracking**: Users can now track their expenses over time with visual graphs and reports.
+
+👉 **Improved User Interface**: The UI has been enhanced for better usability and accessibility.
+
+👉 **Bug Fixes**: Resolved issues related to data input validation and display errors.
+
 ## <a name="quick-start">🤸 Quick Start</a>
 
 Follow these steps to set up the project locally on your machine.
