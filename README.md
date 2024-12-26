@@ -27,9 +27,9 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Built with the latest Next.js and TypeScript, Expense Ease is an advanced AI Expense Ease is an advice tool. It allows users to input their income, expenses, and budgets, and receive personalized Expense Expense advice based on their Expense Expense data. This project is perfect for those looking to learn how to integrate AI-driven insights and Expense Expense management into a Next.js application.
+Built with the latest Next.js and TypeScript, Expense Ease is an advanced AI is an advice tool. It allows users to input their income, expenses, and budgets, and receive personalized Expense Expense advice based on their Expense Expense data. This project is perfect for those looking to learn how to integrate AI-driven insights and Expense Expense management into a Next.js application.
 
-If you're getting started and need assistance or face any bugs, join our active Discord community. It's a place where people help each other out.
+If you're getting started and need assistance or face any bugs, join our active Discord community. It's a place where people help each other out. Thank you!!
 
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
