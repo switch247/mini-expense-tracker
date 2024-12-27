@@ -8,7 +8,7 @@ import { useUser } from '@clerk/nextjs';
 
 function ExpensesScreen() {
 
-  const [expensesList,setExpensesList]=useState([]);
+  const [expensesList, setExpensesList]=useState([]);
     const {user}=useUser();
 
     useEffect(()=>{
@@ -27,6 +27,7 @@ function ExpensesScreen() {
     .rightJoin(Expenses,eq(Budgets.id,Expenses.budgetId))
     .where(eq(Budgets.createdBy,user?.primaryEmailAddress.emailAddress))
     .orderBy(desc(Expenses.id));
+    console.log("result",result);
     setExpensesList(result);
    
   }
