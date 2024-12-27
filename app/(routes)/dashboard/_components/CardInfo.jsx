@@ -1,5 +1,5 @@
 import formatNumber from "@/utils";
-import getExpense ExpenseAdvice from "@/utils/getExpense ExpenseAdvice";
+import getExpenseAdvice from "@/utils/getExpenseAdvice";
 import {
   PiggyBank,
   ReceiptText,
@@ -13,7 +13,7 @@ function CardInfo({ budgetList, incomeList }) {
   const [totalBudget, setTotalBudget] = useState(0);
   const [totalSpend, setTotalSpend] = useState(0);
   const [totalIncome, setTotalIncome] = useState(0);
-  const [Expense ExpenseAdvice, setExpense ExpenseAdvice] = useState("");
+  const [ExpenseAdvice, setExpenseAdvice] = useState("");
 
   useEffect(() => {
     if (budgetList.length > 0 || incomeList.length > 0) {
@@ -23,16 +23,16 @@ function CardInfo({ budgetList, incomeList }) {
 
   useEffect(() => {
     if (totalBudget > 0 || totalIncome > 0 || totalSpend > 0) {
-      const fetchExpense ExpenseAdvice = async () => {
-        const advice = await getExpense ExpenseAdvice(
+      const fetchExpenseAdvice = async () => {
+        const advice = await getExpenseAdvice(
           totalBudget,
           totalIncome,
           totalSpend
         );
-        setExpense ExpenseAdvice(advice);
+        setExpenseAdvice(advice);
       };
 
-      fetchExpense ExpenseAdvice();
+      fetchExpenseAdvice();
     }
   }, [totalBudget, totalIncome, totalSpend]);
 
@@ -74,7 +74,7 @@ function CardInfo({ budgetList, incomeList }) {
                 />
               </div>
               <h2 className="font-light text-md">
-                {Expense ExpenseAdvice || "Loading Expense Expense advice..."}
+                {ExpenseAdvice || "Loading Expense Expense advice..."}
               </h2>
             </div>
           </div>
