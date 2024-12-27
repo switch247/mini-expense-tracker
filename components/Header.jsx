@@ -6,21 +6,29 @@ import { useUser, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 function Header() {
   const { user, isSignedIn } = useUser();
+  const isDashboard = typeof window !== "undefined" && window.location.pathname.startsWith("/dashboard");
+
   return (
     <div className="p-5 flex justify-between items-center border shadow-sm">
       <div className="flex flex-row items-center">
         <Image src={"/chart-donut.svg"} alt="logo" width={40} height={25} />
-        <span className="text-blue-800  font-bold text-xl">Expense EaseSmart</span>
+        <span className="text-blue-800  font-bold text-xl">Expense Ease</span>
       </div>
       {isSignedIn ? (
-        <UserButton />
+        <div className="flex gap-3  items-center">
+          {!isDashboard && (
+            <Link href={"/dashboard"}>
+              <Button variant="outline" className="rounded-full">
+                Dashboard
+              </Button>
+            </Link>
+          )}
+          <UserButton />
+        </div>
+
       ) : (
         <div className="flex gap-3  items-center">
-          <Link href={"/dashboard"}>
-            <Button variant="outline" className="rounded-full">
-              Dashboard
-            </Button>
-          </Link>
+
           <Link href={"/sign-in"}>
             <Button className="rounded-full">Get Started</Button>
           </Link>

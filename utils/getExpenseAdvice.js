@@ -9,16 +9,16 @@ const openai = new OpenAI({
 
 // Function to fetch user-specific data (mocked for this example)
 
-// Function to generate personalized Expense Easecial advice
-const getFinancialAdvice = async (totalBudget, totalIncome, totalSpend) => {
+// Function to generate personalized Expense Ease financial advice
+const getExpenseAdvice = async (totalBudget, totalIncome, totalSpend) => {
   console.log(totalBudget, totalIncome, totalSpend);
   try {
     const userPrompt = `
-      Based on the following Expense Easecial data:
+      Based on the following Expense Ease financial data:
       - Total Budget: ${totalBudget} ETB 
       - Expenses: ${totalSpend} ETB 
       - Incomes: ${totalIncome} ETB
-      Provide detailed Expense Easecial advice in 2 sentence to help the user manage their Expense Easeces more effectively.
+      Provide detailed Expense Ease financial advice in 2 sentence to help the user manage their Expense Easeces more effectively.
     `;
 
     // Send the prompt to the OpenAI API
@@ -33,9 +33,9 @@ const getFinancialAdvice = async (totalBudget, totalIncome, totalSpend) => {
     console.log(advice);
     return advice;
   } catch (error) {
-    console.error("Error fetching Expense Easecial advice:", error);
-    return "Sorry, I couldn't fetch the Expense Easecial advice at this moment. Please try again later.";
+    console.error("Error fetching Expense Ease financial advice:", error);
+    return "Sorry, I couldn't fetch the Expense Ease financial advice at this moment. Please try again later.";
   }
 };
 
-export default getFinancialAdvice;
+export default getExpenseAdvice;
