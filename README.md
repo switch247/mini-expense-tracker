@@ -1,7 +1,7 @@
 <div align="center">
     
   <br />
-  Expense Ease is an advanced AI-driven expense management tool built with Next.js and TypeScript. It allows users to input their income, expenses, and budgets, providing personalized financial advice using OpenAI's GPT-4 model. The project features responsive design and effective budget management capabilities.
+  Expense Ease is an advanced AI-driven expense management tool built with Next.js and TypeScript. It allows users to input their income, expenses, and budgets, providing personalized financial advice using OpenAI's GPT-4 model. The project features responsive design and effective budget management capabilities for effectively manage the expense.
   
   <br />
 
