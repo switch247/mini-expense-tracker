@@ -35,7 +35,10 @@ If you're getting started and need assistance or face any bugs, join our active 
 - Next.js
 - TypeScript
 - OpenAI API
-- Tailwind-CSS
+- Tailwind CSS
+- drizzle orm
+- postgress sql
+- clerk
 
 ## <a name="features">🔋 Features</a>
 
@@ -68,8 +71,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/mendsalbert/ai-Expense Easece-trackingt.git
-cd ai-Expense Easece-tracking
+git clone https://github.com/switch247/mini-expense-tracker.git
+cd mini-expense-tracker
 ```
 
 **Installation**
