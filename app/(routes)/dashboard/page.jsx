@@ -81,7 +81,7 @@ function Dashboard() {
     <div className="p-8 bg-">
       <h2 className="font-bold text-4xl">Hi, {user?.fullName || user?.username || user?.primaryEmailAddress?.emailAddress} 👋</h2>
       <p className="text-gray-500">
-        Here's what happenning with your money, Lets Manage your expense
+        Here's what happening with your money, Lets Manage your expense
       </p>
 
       <CardInfo budgetList={budgetList} incomeList={incomeList} />
@@ -102,8 +102,7 @@ function Dashboard() {
               ))
             : [1, 2, 3, 4].map((item, index) => (
                 <div
-                  className="h-[180xp] w-full
-                 bg-slate-200 rounded-lg animate-pulse"
+                  className="h-[180xp] w-full bg-slate-200 rounded-lg animate-pulse"
                 ></div>
               ))}
         </div>
