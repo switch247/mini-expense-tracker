@@ -38,6 +38,9 @@ If you're getting started and need assistance or face any bugs, join our active 
 - TypeScript
 - OpenAI API
 - Tailwind CSS
+- drizzle orm
+- postgress sql
+- clerk
 
 ## <a name="features">🔋 Features</a>
 
