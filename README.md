@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
 
-  <h3 align="center">Expense Ease</h3>
+  <h3 align="center">Expense Eases</h3>
 
 </div>
 
@@ -24,13 +24,11 @@
 5. 🕸️ [Assets & Code](#snippets)
 6. 🚀 [More](#more)
 
-
 ## <a name="introduction">🤖 Introduction</a>
 
 Built with the latest Next.js and TypeScript, Expense Ease is an advanced AI is an advice tool. It allows users to input their income, expenses, and budgets, and receive personalized Expense Expense advice based on their Expense Expense data. This project is perfect for those looking to learn how to integrate AI-driven insights and Expense Expense management into a Next.js application.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community. It's a place where people help each other out. Thank you!!
-
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -112,7 +110,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-
 ## <a name="contributing">🤝 Contributing</a>
 
 We welcome contributions to improve this project! To contribute, please follow these steps:
@@ -129,4 +126,3 @@ Please ensure your code adheres to our coding standards and includes appropriate
 ## <a name="license">📝 License</a>
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
