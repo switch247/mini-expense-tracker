@@ -3,8 +3,10 @@ import OpenAI from "openai";
 
 // Initialize the OpenAI client
 const openai = new OpenAI({
+  baseURL : "https://api.groq.com/openai/v1",
   apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
+  
 });
 
 // Function to fetch user-specific data (mocked for this example)
@@ -23,7 +25,7 @@ const getExpenseAdvice = async (totalBudget, totalIncome, totalSpend) => {
 
     // Send the prompt to the OpenAI API
     const chatCompletion = await openai.chat.completions.create({
-      model: "gpt-4",
+      model:  "llama-3.1-70b-versatile",
       messages: [{ role: "user", content: userPrompt }],
     });
 
