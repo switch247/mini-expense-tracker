@@ -70,8 +70,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/mendsalbert/ai-Expense Easece-trackingt.git
-cd ai-Expense Easece-tracking
+git clone https://github.com/switch247/mini-expense-tracker.git
+cd mini-expense-tracker
 ```
 
 **Installation**
