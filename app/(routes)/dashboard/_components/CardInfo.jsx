@@ -14,6 +14,7 @@ function CardInfo({ budgetList, incomeList }) {
   const [totalSpend, setTotalSpend] = useState(0);
   const [totalIncome, setTotalIncome] = useState(0);
   const [ExpenseAdvice, setExpenseAdvice] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (budgetList.length > 0 || incomeList.length > 0) {
@@ -21,16 +22,20 @@ function CardInfo({ budgetList, incomeList }) {
     }
   }, [budgetList, incomeList]);
 
+  const fetchExpenseAdvice = async () => {
+    setLoading(true);
+    const advice = await getExpenseAdvice(
+      totalBudget,
+      totalIncome,
+      totalSpend
+    );
+    setLoading(false);
+    setExpenseAdvice(advice);
+  };
+
   useEffect(() => {
     if (totalBudget > 0 || totalIncome > 0 || totalSpend > 0) {
-      const fetchExpenseAdvice = async () => {
-        const advice = await getExpenseAdvice(
-          totalBudget,
-          totalIncome,
-          totalSpend
-        );
-        setExpenseAdvice(advice);
-      };
+
 
       fetchExpenseAdvice();
     }
@@ -64,17 +69,19 @@ function CardInfo({ budgetList, incomeList }) {
             <div className="">
               <div className="flex mb-2 flex-row space-x-1 items-center ">
                 <h2 className="text-md ">Expense Ease AI</h2>
-                <Sparkles
-                  className="rounded-full text-white w-10 h-10 p-2
-    bg-gradient-to-r
-    from-pink-500
-    via-red-500
-    to-yellow-500
-    background-animate"
-                />
+                <div className="relative group">
+                  <Sparkles
+                    onClick={fetchExpenseAdvice}
+                    className="rounded-full text-white w-10 h-10 p-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 background-animate"
+                  />
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-700 text-white text-xs text-center rounded py-1 px-2">
+                    Click to regenerate advice
+                  </div>
+                </div>
+
               </div>
               <h2 className="font-light text-md">
-                {ExpenseAdvice || "Loading Expense Expense advice..."}
+                {loading ? "Loading Expense Advice..." : ExpenseAdvice || "Loading Expense Expense advice..."}
               </h2>
             </div>
           </div>
@@ -84,7 +91,7 @@ function CardInfo({ budgetList, incomeList }) {
               <div>
                 <h2 className="text-sm">Total Budget</h2>
                 <h2 className="font-bold text-2xl">
-                ETB {formatNumber(totalBudget)}
+                  ETB {formatNumber(totalBudget)}
                 </h2>
               </div>
               <PiggyBank className="bg-blue-800 p-3 h-12 w-12 rounded-full text-white" />
@@ -93,7 +100,7 @@ function CardInfo({ budgetList, incomeList }) {
               <div>
                 <h2 className="text-sm">Total Spend</h2>
                 <h2 className="font-bold text-2xl">
-                ETB {formatNumber(totalSpend)}
+                  ETB {formatNumber(totalSpend)}
                 </h2>
               </div>
               <ReceiptText className="bg-blue-800 p-3 h-12 w-12 rounded-full text-white" />
@@ -109,7 +116,7 @@ function CardInfo({ budgetList, incomeList }) {
               <div>
                 <h2 className="text-sm">Sum of Income Streams</h2>
                 <h2 className="font-bold text-2xl">
-                ETB {formatNumber(totalIncome)}
+                  ETB {formatNumber(totalIncome)}
                 </h2>
               </div>
               <CircleDollarSign className="bg-blue-800 p-3 h-12 w-12 rounded-full text-white" />
